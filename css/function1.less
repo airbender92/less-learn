@@ -1,0 +1,30 @@
+
+// 1.618 0.382是黄金比例
+.divSize(@x) {
+  @baseWidth: @x;
+  @mainWidth: round(@baseWidth / 1.618);
+  @sidebarWidth: round(@baseWidth * 0.382);
+}
+
+div {
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  .divSize(800px);
+  width: @baseWidth;
+  border: 1px solid black;
+}
+
+#leftmargin {
+  .divSize(800px);
+  width: @sidebarWidth;
+}
+
+#content {
+  .divSize(800px);
+  width: @mainWidth;
+}

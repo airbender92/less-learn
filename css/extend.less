@@ -1,0 +1,15 @@
+// Imagine you have this simple bit of nested Less:
+.module {
+ padding: 10px;
+ h3 { color: red; }
+}
+// Using extend will produce this:
+.news { &:extend(.module); }
+// The h3 style will not be extended and will instead be compiled as a separate style:
+.module, .news { padding: }
+.module h3 { color: red; }
+// To get around this, we can use the all keyword as shown in the following line of code:
+.news { &:extend(.module all); }
+// The all keyword will extend everything to produce the desired effect:
+.module, .news { padding: 10px; }
+.module h3, .news h3 { color: red; }
