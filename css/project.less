@@ -36,3 +36,8 @@ background-color: @button-color;
 .important {
   .mixin(2) !important
 }
+
+div{
+  .average(6px, 30px); // 'call' the mixin
+  padding: @average; // use its 'return' value
+}
