@@ -6,7 +6,7 @@
 // Using extend will produce this:
 .news { &:extend(.module); }
 // The h3 style will not be extended and will instead be compiled as a separate style:
-.module, .news { padding: }
+.module, .news { padding: 5px}
 .module h3 { color: red; }
 // To get around this, we can use the all keyword as shown in the following line of code:
 .news { &:extend(.module all); }
