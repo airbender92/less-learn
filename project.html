@@ -1,0 +1,33 @@
+<!--
+ * @Author: wangyunbo
+ * @Date: 2021-11-30 09:35:51
+ * @LastEditors: wangyunbo
+ * @LastEditTime: 2021-11-30 14:27:27
+ * @FilePath: \less-example\project.html
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/less" href="css/project.less">
+  <script src="https://cdn.bootcdn.net/ajax/libs/less.js/4.1.1/less.min.js"></script>
+  <script type="text/javascript">
+    less.modifyVars({
+      '@button-color': '#61783F'
+    })
+  </script>
+</head>
+<body>
+  <form action="demo-form.aspx">
+    <label for="fname">First name:</label>
+    <input type="text" name="fname" /><br/>
+    <label for="lname">Last name:</label>
+    <input type="text" name="lname" /><br/>
+    <input class="button red" type="submit" value="Submit" id="submitbtn" />
+  </form>
+</body>
+</html>

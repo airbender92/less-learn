@@ -1,0 +1,38 @@
+@import './variables.less';
+@import './minix.less';
+
+body{
+  color: #444;
+  background: url("@{images}/white-sand.png");
+}
+
+input { margin-top: 10px;}
+
+// extend
+#submitbtn:extend(input) {
+background-color: @button-color;
+  padding: 3px;
+  color: #fff
+}
+
+
+// usage
+.button {
+  .shadow;
+  .formfont;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  padding: .5em 2em .55em;
+  .border-radius(.5em);
+  .box-shadow(1px; 2px; rgba(0, 0, 0, .2))
+}
+
+.unimportant {
+  .mixin(1);
+}
+.important {
+  .mixin(2) !important
+}
